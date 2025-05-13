@@ -1,0 +1,11 @@
+{
+  "name": "crypto-tracker",
+  "version": "1.0.0",
+  "description": "Real-time cryptocurrency tracker",
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  },
+  "scripts": {
+    "start": "live-server"
+  }
+}
