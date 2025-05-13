@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Crypto Tracker</h1>
+  </header>
+
+  <!-- Coin Selector -->
+  <section class="coin-selector">
+    <label for="coinSelect">Select a Coin:</label>
+    <select id="coinSelect">
+      <option value="bitcoin">Bitcoin</option>
+      <option value="ethereum">Ethereum</option>
+      <option value="dogecoin">Dogecoin</option>
+      <!-- Add more coins as needed -->
+    </select>
+  </section>
+
+  <!-- Coin Info Display -->
+  <section class="coin-info">
+    <div id="coinName" class="info-item">Name: --</div>
+    <div id="coinPrice" class="info-item">Price: --</div>
+    <div id="coinChange" class="info-item">24h Change: --</div>
+  </section>
+
+  <!-- Chart Section -->
+  <section class="chart-section">
+    <canvas id="priceChart"></canvas>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
