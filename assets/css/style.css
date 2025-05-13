@@ -1,20 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  color:white;
+  color: white;
   line-height: 1.6;
   animation: fadeIn 1.2s ease-in;
+  background-color: white;
 }
 
-body span{
-    color:black;
+body span {
+  color: black;
 }
 
+/* Header */
 .header {
   background-color: #1e293b;
   color: white;
@@ -23,9 +25,10 @@ body span{
   font-size: 2rem;
   font-weight: bold;
   animation: slideDown 1s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Coin Selector */
 .coin-selector {
   margin: 30px 0;
   text-align: center;
@@ -43,9 +46,11 @@ body span{
   color: #f8fafc;
 }
 
-.coin-selector select:hover{
-    background-color: #334155;
+.coin-selector select:hover {
+  background-color: #334155;
 }
+
+/* Coin Info */
 .coin-info {
   display: flex;
   justify-content: center;
@@ -59,9 +64,10 @@ body span{
   background: #1e293b;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Chart Section */
 .chart-section {
   max-width: 800px;
   margin: auto;
@@ -119,5 +125,61 @@ body span{
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 700px) {
+  .header {
+    font-size: 1.2rem;
+    padding: 15px 0;
+  }
+
+  .coin-selector select {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .chart-section {
+    padding: 20px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.0rem;
+  }
+
+  .coin-selector {
+    margin: 20px 0;
+  }
+
+  .coin-selector select {
+    width: 58%;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .coin-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-item {
+    width: 90%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .chart-section {
+    width: 90%;
+    padding: 20px 10px;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
   }
 }
